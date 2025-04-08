@@ -1,0 +1,18 @@
+After cleaning the dataset obtained from the automation, the following was done:
+- dropped null values
+- displayed the discount percentage distribution which showed a non-standard distribution
+- then categorized and counted the disount groups which showed an imbalanced dataset thus undersampling was doen to solve this issue
+- Used labelEncoder before training an LR model since we need all columns to be numeric. 
+(We have binary options in the shipping column so labelEncoderwas used)
+- after training the following can be seen:
+Metric     Value
+----------------------
+MAE        11.57668953133974
+MSE        222.24431509659286
+RMSE       14.907860849115572
+R²         0.5807530206277446
+
+This shows that the error of the predictions is between 11-15% 
+R² score shows that the model performance isn't great (approx. 58%)
+This can be seen in the graphs were approx half of the predictions were correct
+- Finally the model was tested on incomplete data
